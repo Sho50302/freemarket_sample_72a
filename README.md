@@ -8,7 +8,7 @@
 |nickname|string|null: false|
 |email|string|null: false, unique: true|
 |password|string|null: false|
-|phone_number|integer|null: false, unique: true, index: true|
+|phone_number|string|null: false, unique: true, index: true|
 |first_name|string|null: false|
 |last_name|string|null: false|
 |first_name_reading|string|null: false|
@@ -16,7 +16,6 @@
 |birthday_year|string|null: false|
 |birthday_month|string|null: false|
 |birthday_day|string|null: false|
-|profile|text||
 ### association
 - has_one :deliver_address
 - has_many :orders
@@ -45,37 +44,25 @@
 - has_many :orders
 - has_many :item_images
 
-## deliver_addresses
+## deliver_addressesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |first_name|string|null: false|
 |last_name|string|null: false|
 |first_name_reading|string|null: false|
 |last_name_reading|string|null: false|
-|post_code|integer|null: false|
+|post_code|string|null: false|
 |prefecture_id|integer|null: false|
 |address_city|string|null: false|
 |address_street|string|null: false|
 |address_building|string||
-|phone_number|integer||
+|phone_number|string||
 |user_id|references|null: false, foreign_key: true|
 ### association
 - belongs_to :user
 - has_many :orders
 
-## orders
-|Column|Type|Options|
-|------|----|-------|
-|order_day|string|null: false|
-|user_id|references|null: false, foreign_key: true|
-|item_id|references|null: false, foreign_key: true|
-|deliver_address_id|references|null: false, foreign_key: true|
-### association
-- belongs_to :user
-- belongs_to :item
-- belongs_to :deliver_address
-
-## item_images
+## item_imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image_url|string|null: false|
@@ -83,7 +70,7 @@
 ### association
 - belongs_to :item
 
-## categories
+## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique: true|
@@ -91,17 +78,18 @@
 ### association
 - has_many :items
 
-## brands
+## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique:true|
 ### association
 - has_many :items
 
-## cards
+## cardsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|pay_id|string|null: false|
+|card_id|string|null: false|
+|customer_id|string|null: false|
 |user_id|references|null: false, foreign_key: true|
 ### association
 - belongs_to :user
