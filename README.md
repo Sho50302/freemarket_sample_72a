@@ -1,11 +1,8 @@
 # README
 
 URL http://18.178.119.38/
-
 ID/Pass
-
 ID: team72a
-
 Pass: 2222
 
 
