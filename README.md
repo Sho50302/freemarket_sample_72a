@@ -1,51 +1,26 @@
 # README
 
 URL http://18.178.119.38/
-
 ID/Pass
-
 ID: team72a
-
 Pass: 2222
 
 
-
-
 テスト用アカウント等
-
 購入者用
-
 メールアドレス: purchase72a@mail.com
-
 パスワード: 1234567
 
 
-
-
 購入用カード情報
-
 番号：4242424242424242
-
 期限：12/20
-
 セキュリティコード：123
 
 
-
-
 出品者用
-
 メールアドレス名:  sell72a@mail.com
-
 パスワード: 7654321
-
-
-
-
-Githubリポジトリ
-
-https://github.com/Sho50302/freemarket_sample_72a
-
 
 
 # freemarket_sample_72a DB設計
